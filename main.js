@@ -29,6 +29,10 @@ window.onload = function() {
     getImg();
     input.focus();
     input.select();
+    input.value = lightdm.select_user_hint;
+    if(input.value) {
+        authenticate(input.value);
+    }
 }
 
 function authenticate(input_text) {
